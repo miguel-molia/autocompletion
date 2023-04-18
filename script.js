@@ -95,15 +95,28 @@ fetch("recherche.php/?id="+ id[1]).then((response) => {
        let p = document.createElement('p');
     
     let divImg = document.createElement('div');
-   
-    divImg.innerHTML = '<img src="photo/'+data[0].Nom+data[0].Prenom+'.png">'
-    
-   
-    p.innerHTML = '<a href="element.php?id='+ data[0].id+'">' + data[0].Prenom +' '+ data[0].Nom +' '+ data[0].Numero +' '+ data[0].Poste +' '+ data[0].Pays +'</a>';
-   
-    divJoueur.append(p);
+    let divtxt= document.createElement('div');
 
-   divJoueur.append(divImg);
+    let np = data[0].Nom+data[0].Prenom;
+    np = np.replace(/\s+/g,'');
+   
+    
+
+    divImg.innerHTML = '<img src="photo/'+ np +'.png" style="width:auto; margin:auto">'
+    
+    divtxt.innerHTML = '<div style= "color:yellow; font-size: 40px; font-family: Fugaz One, cursive;">' + data[0].Prenom +' '+ data[0].Nom +'</div>'
+    + '<div style= "color:white; font-size: 30px; font-family: Fugaz One, cursive;">'+'Numero:'+ ' ' + data[0].Numero+ '</div>'
+    + '<div style= "color:white; font-size: 30px; font-family: Fugaz One, cursive;">'+ data[0].Poste +'</div>'
+    + '<div style= "color:white; font-size: 30px; font-family: Fugaz One, cursive; display:flex; flex-direction:row; align-items:center; margin:auto; justify-content:space-around;">'+ data[0].Pays  +'<img style="height:10vh; width:auto; margin: auto auto auto 10px" src="photo/pays/'+ data[0].Pays 
+    + '.svg.png">' +'</div>'
+   
+    divJoueur.append(divtxt);
+    divJoueur.append(divImg);
+
+    divtxt.setAttribute('style','text-align:center; display:flex; flex-direction:column;');
+    divImg.setAttribute('style','margin:auto');
+
+
 
    
 })

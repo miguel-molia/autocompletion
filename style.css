@@ -1,7 +1,9 @@
 body{
 
     background-image: url('photo/om.png');
-    background-size: cover;
+     background-size: cover;
+    background-repeat: no-repeat; 
+    /* background-position: center center; */
     
 }
 
@@ -51,4 +53,19 @@ a{
 
 .resultJoueur p a {
     color:white ;
+    font-family: 'Fugaz One', cursive;
+    font-size: 28px;
+}
+
+
+.resultJoueur{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-left: -30%;
+}
+ 
+
+header {
+    margin-bottom: 100px;
 }
