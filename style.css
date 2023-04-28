@@ -69,3 +69,22 @@ a{
 header {
     margin-bottom: 100px;
 }
+
+
+.textom{
+
+color: white;
+font-family: 'Black Han Sans', sans-serif;
+font-size: 30px;
+padding-left: 2%;
+}
+
+.om{
+
+    color: yellow;
+}
+
+.allezom{
+
+    color: orange;
+}
